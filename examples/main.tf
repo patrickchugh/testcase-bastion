@@ -34,7 +34,7 @@ module "bastion-host" {
   environment        = var.environment
   subnet_id          = module.private-vpc.public_subnet_ids[0]
   security_group_ids = [module.private-vpc.security_group_id]
-  source             = "github.com/garutilorenzo/aws-terraform-examples/bastion-host"
+  source             = "../bastion-host"
 }
 
 output "bastion_host_ip" {
@@ -46,7 +46,7 @@ module "ec2-instance" {
   environment        = var.environment
   subnet_id          = module.private-vpc.private_subnet_ids[0]
   security_group_ids = [module.private-vpc.security_group_id]
-  source             = "github.com/garutilorenzo/aws-terraform-examples/ec2-instance"
+  source             = "../ec2-instance"
 }
 
 output "ec2_instance_ip" {

@@ -37,5 +37,5 @@ variable "bastion_group" {
 
 variable "ssh_keys_path" {
   type    = list(any)
-  default = ["~/.ssh/id_rsa.pub"]
+  default = ["id_rsa.pub"]
 }
